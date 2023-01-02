@@ -1,0 +1,9 @@
+{
+  "environment": "argo-pro",
+  "cloud": "aws",
+  "region": "eu-west-1",
+  "cluster": {
+    "name": "in-cluster",
+    "address": "https://kubernetes.default.svc"
+  }
+}

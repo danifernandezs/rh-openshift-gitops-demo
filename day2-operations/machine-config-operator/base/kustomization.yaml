@@ -1,0 +1,11 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+# MachineConfigPool
+  - mcp/compute-mcp.yaml
+  - mcp/infra-mcp.yaml
+  - mcp/inframonit-mcp.yaml
+# ClusterAutoScaler
+  - clusterautoscaler/clusterautoscaler.yaml

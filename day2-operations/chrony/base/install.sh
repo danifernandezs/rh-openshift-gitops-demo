@@ -64,5 +64,5 @@ done
 
 # Update the kustomization.yaml file with the list of .yaml filenames
 for yaml_filename in "${yaml_filenames[@]}"; do
-  echo "  - $yaml_filename" >> "kustomization.yaml"
+  echo "  - $directory/$yaml_filename" >> "kustomization.yaml"
 done

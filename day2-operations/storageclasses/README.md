@@ -13,7 +13,7 @@
 │       ├── gp2.yaml
 │       └── gp3-csi.yaml
 ├── overlays
-│   └── lab
+│   └── in-cluster
 │       └── kustomization.yaml
 └── README.md
 ```

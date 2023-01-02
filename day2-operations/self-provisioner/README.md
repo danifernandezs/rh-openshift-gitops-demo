@@ -11,9 +11,7 @@
 │   │   └── selfprovisioner.yaml
 │   └── kustomization.yaml
 ├── overlays
-│   ├── dev
-│   │   └── kustomization.yaml
-│   └── lab
+│   └── in-cluster
 │       └── kustomization.yaml
 └── README.md
 ```

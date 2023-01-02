@@ -21,9 +21,6 @@ spec:
       metadata:
         labels:
           node-role.kubernetes.io/compute: ""
-      taints:
-      - effect: NoSchedule
-        key: node-role.kubernetes.io/compute
       providerSpec:
         value:
           userDataSecret:
@@ -88,9 +85,6 @@ spec:
       metadata:
         labels:
           node-role.kubernetes.io/compute: ""
-      taints:
-      - effect: NoSchedule
-        key: node-role.kubernetes.io/compute
       providerSpec:
         value:
           userDataSecret:
@@ -155,9 +149,6 @@ spec:
       metadata:
         labels:
           node-role.kubernetes.io/compute: ""
-      taints:
-      - effect: NoSchedule
-        key: node-role.kubernetes.io/compute
       providerSpec:
         value:
           userDataSecret:

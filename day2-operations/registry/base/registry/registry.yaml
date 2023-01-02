@@ -11,3 +11,5 @@ spec:
     key: node-role.kubernetes.io/infra
     operator: "Exists"
   replicas: 2
+  managementState: Managed
+

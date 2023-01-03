@@ -2,21 +2,21 @@
 apiVersion: machine.openshift.io/v1beta1
 kind: MachineSet
 metadata:
-  name: fifth-w52wk-compute-eu-west-1a
+  name: sixth-jqpsh-compute-eu-west-1a
   namespace: openshift-machine-api
 spec:
   replicas: 1
   selector:
     matchLabels:
-      machine.openshift.io/cluster-api-cluster: fifth-w52wk
-      machine.openshift.io/cluster-api-machineset: fifth-w52wk-compute-eu-west-1a
+      machine.openshift.io/cluster-api-cluster: sixth-jqpsh
+      machine.openshift.io/cluster-api-machineset: sixth-jqpsh-compute-eu-west-1a
   template:
     metadata:
       labels:
-        machine.openshift.io/cluster-api-cluster: fifth-w52wk
+        machine.openshift.io/cluster-api-cluster: sixth-jqpsh
         machine.openshift.io/cluster-api-machine-role: compute
         machine.openshift.io/cluster-api-machine-type: compute
-        machine.openshift.io/cluster-api-machineset: fifth-w52wk-compute-eu-west-1a
+        machine.openshift.io/cluster-api-machineset: sixth-jqpsh-compute-eu-west-1a
     spec:
       metadata:
         labels:
@@ -43,11 +43,11 @@ spec:
             - filters:
                 - name: 'tag:Name'
                   values:
-                    - fifth-w52wk-worker-sg
+                    - sixth-jqpsh-worker-sg
           kind: AWSMachineProviderConfig
           metadataServiceOptions: {}
           tags:
-            - name: kubernetes.io/cluster/fifth-w52wk
+            - name: kubernetes.io/cluster/sixth-jqpsh
               value: owned
             - name: node-role
               value: compute
@@ -58,29 +58,29 @@ spec:
             filters:
             - name: tag:Name
               values:
-              - fifth-w52wk-private-eu-west-1a
+              - sixth-jqpsh-private-eu-west-1a
           apiVersion: machine.openshift.io/v1beta1
           iamInstanceProfile:
-            id: fifth-w52wk-worker-profile
+            id: sixth-jqpsh-worker-profile
 ---
 apiVersion: machine.openshift.io/v1beta1
 kind: MachineSet
 metadata:
-  name: fifth-w52wk-compute-eu-west-1b
+  name: sixth-jqpsh-compute-eu-west-1b
   namespace: openshift-machine-api
 spec:
   replicas: 1
   selector:
     matchLabels:
-      machine.openshift.io/cluster-api-cluster: fifth-w52wk
-      machine.openshift.io/cluster-api-machineset: fifth-w52wk-compute-eu-west-1b
+      machine.openshift.io/cluster-api-cluster: sixth-jqpsh
+      machine.openshift.io/cluster-api-machineset: sixth-jqpsh-compute-eu-west-1b
   template:
     metadata:
       labels:
-        machine.openshift.io/cluster-api-cluster: fifth-w52wk
+        machine.openshift.io/cluster-api-cluster: sixth-jqpsh
         machine.openshift.io/cluster-api-machine-role: compute
         machine.openshift.io/cluster-api-machine-type: compute
-        machine.openshift.io/cluster-api-machineset: fifth-w52wk-compute-eu-west-1b
+        machine.openshift.io/cluster-api-machineset: sixth-jqpsh-compute-eu-west-1b
     spec:
       metadata:
         labels:
@@ -107,11 +107,11 @@ spec:
             - filters:
                 - name: 'tag:Name'
                   values:
-                    - fifth-w52wk-worker-sg
+                    - sixth-jqpsh-worker-sg
           kind: AWSMachineProviderConfig
           metadataServiceOptions: {}
           tags:
-            - name: kubernetes.io/cluster/fifth-w52wk
+            - name: kubernetes.io/cluster/sixth-jqpsh
               value: owned
             - name: node-role
               value: compute
@@ -122,29 +122,29 @@ spec:
             filters:
             - name: tag:Name
               values:
-              - fifth-w52wk-private-eu-west-1b
+              - sixth-jqpsh-private-eu-west-1b
           apiVersion: machine.openshift.io/v1beta1
           iamInstanceProfile:
-            id: fifth-w52wk-worker-profile
+            id: sixth-jqpsh-worker-profile
 ---
 apiVersion: machine.openshift.io/v1beta1
 kind: MachineSet
 metadata:
-  name: fifth-w52wk-compute-eu-west-1c
+  name: sixth-jqpsh-compute-eu-west-1c
   namespace: openshift-machine-api
 spec:
   replicas: 1
   selector:
     matchLabels:
-      machine.openshift.io/cluster-api-cluster: fifth-w52wk
-      machine.openshift.io/cluster-api-machineset: fifth-w52wk-compute-eu-west-1c
+      machine.openshift.io/cluster-api-cluster: sixth-jqpsh
+      machine.openshift.io/cluster-api-machineset: sixth-jqpsh-compute-eu-west-1c
   template:
     metadata:
       labels:
-        machine.openshift.io/cluster-api-cluster: fifth-w52wk
+        machine.openshift.io/cluster-api-cluster: sixth-jqpsh
         machine.openshift.io/cluster-api-machine-role: compute
         machine.openshift.io/cluster-api-machine-type: compute
-        machine.openshift.io/cluster-api-machineset: fifth-w52wk-compute-eu-west-1c
+        machine.openshift.io/cluster-api-machineset: sixth-jqpsh-compute-eu-west-1c
     spec:
       metadata:
         labels:
@@ -171,11 +171,11 @@ spec:
             - filters:
                 - name: 'tag:Name'
                   values:
-                    - fifth-w52wk-worker-sg
+                    - sixth-jqpsh-worker-sg
           kind: AWSMachineProviderConfig
           metadataServiceOptions: {}
           tags:
-            - name: kubernetes.io/cluster/fifth-w52wk
+            - name: kubernetes.io/cluster/sixth-jqpsh
               value: owned
             - name: node-role
               value: compute
@@ -186,7 +186,7 @@ spec:
             filters:
             - name: tag:Name
               values:
-              - fifth-w52wk-private-eu-west-1c
+              - sixth-jqpsh-private-eu-west-1c
           apiVersion: machine.openshift.io/v1beta1
           iamInstanceProfile:
-            id: fifth-w52wk-worker-profile
+            id: sixth-jqpsh-worker-profile

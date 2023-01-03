@@ -2,7 +2,7 @@
 apiVersion: autoscaling.openshift.io/v1beta1
 kind: MachineAutoscaler
 metadata:
-  name: fifth-w52wk-inframonit-eu-west-1a
+  name: sixth-jqpsh-inframonit-eu-west-1a
   namespace: openshift-machine-api
 spec:
   minReplicas: 1
@@ -10,12 +10,12 @@ spec:
   scaleTargetRef:
     apiVersion: machine.openshift.io/v1beta1
     kind: MachineSet
-    name: fifth-w52wk-inframonit-eu-west-1a
+    name: sixth-jqpsh-inframonit-eu-west-1a
 ---
 apiVersion: autoscaling.openshift.io/v1beta1
 kind: MachineAutoscaler
 metadata:
-  name: fifth-w52wk-inframonit-eu-west-1b
+  name: sixth-jqpsh-inframonit-eu-west-1b
   namespace: openshift-machine-api
 spec:
   minReplicas: 1
@@ -23,12 +23,12 @@ spec:
   scaleTargetRef:
     apiVersion: machine.openshift.io/v1beta1
     kind: MachineSet
-    name: fifth-w52wk-inframonit-eu-west-1b
+    name: sixth-jqpsh-inframonit-eu-west-1b
 ---
 apiVersion: autoscaling.openshift.io/v1beta1
 kind: MachineAutoscaler
 metadata:
-  name: fifth-w52wk-inframonit-eu-west-1c
+  name: sixth-jqpsh-inframonit-eu-west-1c
   namespace: openshift-machine-api
 spec:
   minReplicas: 1
@@ -36,4 +36,4 @@ spec:
   scaleTargetRef:
     apiVersion: machine.openshift.io/v1beta1
     kind: MachineSet
-    name: fifth-w52wk-inframonit-eu-west-1c
+    name: sixth-jqpsh-inframonit-eu-west-1c

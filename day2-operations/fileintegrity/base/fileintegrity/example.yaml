@@ -1,0 +1,23 @@
+---
+apiVersion: fileintegrity.openshift.io/v1alpha1
+kind: FileIntegrity
+metadata:
+  name: example-fileintegrity
+  namespace: openshift-file-integrity
+spec:
+  config:
+    gracePeriod: 900
+    maxBackups: 5
+    name: example-fileintegrity
+    namespace: openshift-file-integrity
+  debug: false
+  tolerations:
+    - effect: NoSchedule
+      key: node-role.kubernetes.io/master
+      operator: Exists
+    - effect: NoSchedule
+      key: node-role.kubernetes.io/infra
+      operator: Exists
+    - effect: NoSchedule
+      key: node-role.kubernetes.io/inframonit
+      operator: Exists

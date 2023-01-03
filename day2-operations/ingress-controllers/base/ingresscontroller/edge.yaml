@@ -1,0 +1,26 @@
+---
+apiVersion: operator.openshift.io/v1
+kind: IngressController
+metadata:
+  name: edge
+  namespace: openshift-ingress-operator
+spec:
+  httpHeaders:
+    forwardedHeaderPolicy: IfNone
+  replicas: 3
+  domain: edge.domain.com
+  endpointPublishingStrategy:
+    loadBalancer:
+      scope: External
+    type: LoadBalancerService
+  routeSelector:
+    matchLabels:
+      router: "edge"
+  nodePlacement:
+    nodeSelector:
+      matchLabels:
+        node-role.kubernetes.io/infra: ""
+    tolerations:
+    - effect: "NoSchedule"
+      key: node-role.kubernetes.io/infra
+      operator: "Exists"

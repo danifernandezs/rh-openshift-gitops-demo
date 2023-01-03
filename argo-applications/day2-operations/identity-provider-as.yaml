@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: identity-provider
+  name: identity-providers
   namespace: openshift-gitops
 spec:
   generators:
@@ -13,13 +13,13 @@ spec:
       - path: "cluster-definition/**/cluster.json"
   template:
     metadata:
-      name: '{{cluster.name}}-identity-provider'
+      name: '{{cluster.name}}-identity-providers'
     spec:
       project: day2
       source:
         repoURL: https://github.com/danifernandezs/rh-openshift-gitops-demo.git
         targetRevision: main
-        path: day2-operations/identity-provider/overlays/{{cluster.name}}
+        path: day2-operations/identity-providers/overlays/{{cluster.name}}
       destination:
         server: '{{cluster.address}}'
       syncPolicy:
